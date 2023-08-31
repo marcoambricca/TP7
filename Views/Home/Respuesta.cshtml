@@ -1,0 +1,12 @@
+@{
+    if(ViewBag.Correcta){
+        <h3>La respuesta es correcta!!</h3>
+    }
+    else{
+        <h3>La respuesta es incorrecta</h3>
+    }
+    
+    <form action='@Url.Action("Jugar")'>
+        <button type="submit" class="btn btn-success" >Siguiente pregunta</button>
+    </form>
+}

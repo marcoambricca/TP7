@@ -1,0 +1,27 @@
+    <div class="main-preguntados">
+        <img class="mainLogo" src="/img/logo.png" alt="logo">
+        <form action='@Url.Action("Comenzar")' aria-required="true">
+            <div class="inputs">
+                <label>Nombre de usuario</label>
+                <input class="form-control" type="text" placeholder="Username" name="username" required>
+            </div>
+            <div class="categorias">
+                <ul>
+                    @{
+                        for(int i = 0; i<ViewBag.categorias.Count; i++){
+                            <li><p>@ViewBag.categorias[i].Nombre</p><input type="radio" name="categoria" value="@(i+1)" required></li>
+                        }
+                    }
+                    <li><p>Todas</p><input type="radio" name="categoria" value="-1" required></li>
+                </ul> 
+            </div>
+                <div class="dificultad">
+                    <ul>
+                            <li><button type="submit" class="btn btn-success" name="dificultad" value="1">@ViewBag.dificultad[0].Nombre</button></li>
+                            <li><button type="submit" class="btn btn-warning" name="dificultad" value="2">@ViewBag.dificultad[1].Nombre</button></li>
+                            <li><button type="submit" class="btn btn-danger" name="dificultad" value="3">@ViewBag.dificultad[2].Nombre</button></li>
+                    </ul>
+                </div>
+        </form>
+        
+    </div>

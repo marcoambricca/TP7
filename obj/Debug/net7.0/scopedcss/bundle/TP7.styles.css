@@ -1,0 +1,20 @@
+/* _content/TP7/Views/Shared/_Layout.cshtml.rz.scp.css */
+body[b-0r39p550tf]{
+  background-color: antiquewhite !important;
+}
+header[b-0r39p550tf]{
+  display: block;
+  background-color: rgb(16, 16, 117);
+}
+header img[b-0r39p550tf]{
+  margin-left: 5%;
+  width: 7%;
+}
+header a[b-0r39p550tf]{
+  color: antiquewhite;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  margin-top: 2%;
+  font-size: 1.5rem;
+  padding-right: 2%;
+}

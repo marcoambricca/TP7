@@ -1,0 +1,19 @@
+<div class="estats">
+    <h2>@ViewBag.username</h2>
+    <h2>Cantidad de preguntas correctas: @ViewBag.cantPregCorrectas/@ViewBag.pregCont</h2>
+</div>
+<div class="pregunta">
+    <h1>@ViewBag.proxPreg.Enunciado</h1>
+    <ul>
+        <form action='@Url.Action("VerificarRespuesta")'>
+            <input type="hidden" name="idPregunta" value="@ViewBag.proxPreg.IdPregunta">
+            <div class="respuestas">
+                @{
+                    for(int i = 0; i<ViewBag.proxResp.Count; i++){
+                        <li><button type="submit" class="btn btn-primary" name="idRespuesta" value="@ViewBag.proxResp[i].IdRespuesta">@ViewBag.proxResp[i].Contenido</button></li>
+                    }
+                }
+            </div>
+        </form>
+    </ul>
+</div>
